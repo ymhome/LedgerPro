@@ -1,0 +1,516 @@
+@charset "UTF-8";
+
+body{
+    color: #2C3E50;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1{
+    margin: 0;
+}
+button{
+    cursor: pointer;
+}
+.logo_img{
+    object-fit: cover;
+}
+
+
+/* 
+
+ヘッダー
+
+*/
+
+.header{
+    width: calc(100% - 200px);
+    margin-left: auto;
+}
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px 0;
+    margin: auto;
+}
+/* .header__logo{} */
+.header__logo-img{
+    width: 250px;
+}
+/* .header__nav{} */
+.header__nav-list{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.header__nav-item{
+    margin-right: 24px;
+}
+/* .header__nav-usr{} */
+.header__nav-logout{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    border-right: 0px;
+    position: relative;
+}
+.header__nav-logout::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: -5px;
+    background: #000;
+    width: 15px;
+    height: 1px;
+}
+.header__nav-logout::after{
+    position: absolute;
+    content: "";
+    top: 4px;
+    transform: rotate(45deg);
+    right: -5px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    width: 8px;
+    height: 8px;
+}
+
+
+/* 
+
+フッター
+
+*/
+
+.footer{
+    width: calc(100% - 200px);
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer__copy{
+    font-size: 14px;
+}
+.footer__var{
+    font-size: 14px;
+    margin-left: 24px;
+}
+
+
+
+
+/* 
+
+
+ログイン
+
+
+*/
+
+
+.login__inner{
+    width: 800px;
+    margin: 200px auto;
+    background: #ECF0F1;
+    padding: 60px;
+}
+.login__logo{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.login__logo-img{
+    width: 260px;
+}
+/* .login__content{} */
+.login__item{
+    margin-bottom: 32px;
+}
+.login__label{
+    display: block;
+    font: 18px;
+    margin-bottom: 10px;
+}
+.login__input{
+    width: 100%;
+    border: 0;
+    line-height: 3;
+    border-radius: 3px;
+}
+.login__btn-box{
+    text-align: center;
+    margin-top: 60px;
+}
+.login__btn{
+    width: 250px;
+    padding: 10px 0;
+    background: #2C3E50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0;
+}
+
+
+
+
+
+/* 
+
+サイドメニュー
+
+*/
+
+
+.side{
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    background: #2C3E50;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.side__list{
+    width: 100%;
+}
+.side__item{
+    width: 100%;
+}
+.side__item.current{
+    background: #18BC9C;
+}
+.side__link{
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+}
+
+
+
+/* 
+
+メイン
+
+*/
+
+
+.error-msg{
+    color: red;
+    margin-bottom: 40px;
+}
+
+.main{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+.main__inner{
+    width: calc(100% - 200px);
+    margin-left: auto;
+}
+.main__content{
+    padding: 60px 20px;
+    margin: 0 auto;
+}
+.main__title{
+    margin-bottom: 60px;
+}
+
+.main__table-box{
+    width: 100%;
+    overflow-x: scroll;
+}
+
+
+/* 
+
+フロントページ
+
+*/
+
+.top__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 12px;
+}
+.top__box{
+    padding: 20px 0;
+    background: #ECF0F1;
+    text-align: center;
+    aspect-ratio: 16 / 9;
+}
+.top__link{
+    font-size: 20px;
+    font-weight: bold;
+    color: #2C3E50;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/* 
+
+管理画面一覧表
+
+*/
+
+.tool{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 32px;
+}
+
+.create-btn{
+    width: 40%;
+    height: 45px;
+    cursor: pointer;
+    background: #2C3E50;
+    font-size: 18px;
+    position: relative;
+    border: none;
+    padding-left: 20px;
+}
+
+.create-btn::before{
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 15px;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-53px , -50%);
+}
+.create-btn::after{
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 2px;
+    height: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-46px , -50%);
+}
+
+.create-btn-link{
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: #ecf0f1;
+}
+
+.tool label{
+    width: calc(100% - 50px);
+}
+
+.tool input {
+    width: 100%;
+    height: 45px;
+    padding: 5px 15px;
+    border: none;
+    box-sizing: border-box;
+    background-color: #ecf0f1;
+    font-size: 1em;
+    outline: none;
+}
+
+.tool input::placeholder {
+    color: #2c3e50;
+}
+
+.search-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search-btn::after {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%20%3Cpath%20d%3D%22M23.7%2020.8%2019%2016.1c-.2-.2-.5-.3-.8-.3h-.8c1.3-1.7%202-3.7%202-6C19.5%204.4%2015.1%200%209.7%200S0%204.4%200%209.7s4.4%209.7%209.7%209.7c2.3%200%204.3-.8%206-2v.8c0%20.3.1.6.3.8l4.7%204.7c.4.4%201.2.4%201.6%200l1.3-1.3c.5-.5.5-1.2.1-1.6zm-14-5.1c-3.3%200-6-2.7-6-6s2.7-6%206-6%206%202.7%206%206-2.6%206-6%206z%22%20fill%3D%22%232c3e50%22%3E%3C%2Fpath%3E%20%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    content: '';
+}
+
+.action-tool{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+
+.filter-box{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+}
+.filter-item{
+    width: 33%;
+}
+
+/* .select-box{} */
+.select-box select{
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    padding: 0 10px;
+    color: #2C3E50;
+    border: 1px solid #2C3E50;
+}
+
+.action-item{
+    width: 120px;
+}
+
+.action-btn{
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    background: #ecf0f1;
+    color: #2C3E50;
+    border: 1px solid #2C3E50;
+    font-size: 16px;
+    display: block;
+}
+
+
+.main__list-table{
+    border: 1px solid #ECF0F1;
+    width: 100%;
+    min-width: 1100px;
+    text-align: center;
+    margin-top: 80px;
+}
+.main__list-thead{
+    background: #2C3E50;
+    color: #fff;
+}
+.main__list-th{
+    padding: 10px 5px;
+    border: 1px solid #ECF0F1;
+}
+.main__list-td{
+    border: 1px solid #ECF0F1;
+    padding: 10px 5px;
+}
+.main__list-tr:nth-child(2n){
+    background: #E5E8EB;
+}
+.main__list-operation{
+    line-height: 0.4;
+}
+.pass-view-btn{
+    background: #ECF0F1;
+    color: #2C3E50;
+    border: 1px solid #2C3E50;
+    cursor: pointer;
+}
+.device-checkbox{
+    cursor: pointer;
+}
+
+
+
+/* 
+
+
+新規追加
+
+
+*/
+
+
+
+.main__create-item{
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.main__create-label{
+    font-weight: bold;
+    display: inline-block;
+    width: 150px;
+}
+
+.main__create-input{
+    width: calc(100% - 150px);
+    max-width: 800px;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+.main__create-area{
+    height: 250px;
+    width: calc(100% - 150px);
+    max-width: 800px;
+}
+.main__create-select{
+    width: calc(100% - 150px);
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.main__create-btn{
+    margin-top: 60px;
+    background: #2C3E50;
+    color: #fff;
+    border: 0;
+    width: 250px;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.delete-button{
+    margin-top: 80px;
+}
